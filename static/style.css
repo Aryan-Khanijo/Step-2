@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;469;500;600;700&display=swap');
+
+html, body{
+    margin: 0;
+    color: rgb(0, 49, 24);
+    background-color: aquamarine;
+}
+
+.format-text{font-family: Roboto, "Helvetica Neue", sans-serif;font-size: 10px;}
+.main{
+    width: 30%;
+    margin: auto;
+    margin-top: 150px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    background-color: white;
+    font-family: 'Oswald', sans-serif;
+    padding-bottom: 20px;
+}
+
+.spacing-right{margin-right: 70px;}
+
+.spacing-left{margin-left: 30px;}
+
+.right{float: right;}
+
+.light{color: rgba(0, 0, 0, 0.5) !important;}
+
+.light-max{color: rgba(0, 0, 0, 0.2) !important;}
+
+.item{padding-left: 20px !important;}
+
+.icon{font-size: 16px !important;}
+.details{font-size: 14px !important;}
+.info{font-size: 13px !important;}
+.small{font-size: 11px !important;}
+
+/* Griding */
+.table{padding: 0 10px 0 10px;}
+.row{padding: 10px;}
+.col{display: inline-block;}
+.col-6{width: 49%;}
+.col-5{width: 41%;}
+.col-4{width: 32%;}
+.col-3{width: 25%;}
+.col-2{width: 16%;}
+.col-1{width: 8%;}
+.col-rem{width: auto;}
+/* complete */
+.content-right{text-align: right;}
+.content-center{text-align: center;}
+.pos{margin: auto;width: 70%;}
+.cross:after{content: ' \2716';}
+.flor-green{color: seagreen;}
+.btn{width: 90%;}
+button{
+    width: 100% !important;
+    background-color: rgba(0, 0, 0, 0.19) !important;
+    color: white !important;
+}
+button:hover{
+    background-color: seagreen !important;
+}
+.policy>a{
+    color: rgb(0, 197, 85);
+    text-decoration: none;
+}
+.end{
+    margin-bottom: 10px;
+}
+.policy{
+    width: 90%;
+    margin: auto;
+}
+
+@media only screen and (max-width: 770px){
+    .main{
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 450px){
+    .main{
+        width: 75%;
+    }
+}
