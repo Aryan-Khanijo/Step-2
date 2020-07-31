@@ -4,13 +4,16 @@ html, body{
     margin: 0;
     color: rgb(0, 49, 24);
     background-color: aquamarine;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    overflow: auto;
 }
 
 .format-text{font-family: Roboto, "Helvetica Neue", sans-serif;font-size: 10px;}
 .main{
     width: 30%;
     margin: auto;
-    margin-top: 150px;
+    margin-top: 100px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 10px;
     background-color: white;
@@ -75,6 +78,19 @@ button:hover{
 
 .margin-null{
     margin: 0 !important;
+}
+
+@media only screen and (min-width: 2560px){
+    .main{
+        width: 20%
+    }
+}
+
+@media only screen and (max-width: 1025px){
+    .main{
+        width: 40%;
+    }
+    
 }
 
 @media only screen and (max-width: 770px){
