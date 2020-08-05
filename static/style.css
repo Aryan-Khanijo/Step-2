@@ -2,6 +2,7 @@
 
 html, body{
     margin: 0;
+    font-family: 'Oswald', sans-serif;
     color: rgb(0, 49, 24);
     background-color: aquamarine;
     -ms-overflow-style: none;  /* IE and Edge */
@@ -9,104 +10,34 @@ html, body{
     overflow: auto;
 }
 
-.format-text{font-family: Roboto, "Helvetica Neue", sans-serif;font-size: 10px;}
 .main{
-    width: 30%;
-    margin: auto;
-    margin-top: 100px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 10px;
     background-color: white;
-    font-family: 'Oswald', sans-serif;
-    padding-bottom: 20px;
+    margin-top: 130px;
+    padding-bottom: 10px;
 }
 
-.spacing-right{margin-right: 70px;}
-
-.spacing-left{margin-left: 30px;}
-
-.right{float: right;}
-
+header{font-size: 20px;}
+.table{padding: 15px;}
+.format-text{font-family: Roboto, "Helvetica Neue", sans-serif;}
 .light{color: rgba(0, 0, 0, 0.5) !important;}
-
-.light-max{color: rgba(0, 0, 0, 0.2) !important;}
-
-.item{padding-left: 20px !important;}
-
+.align-center{text-align: center;}
+.align-right{text-align: right;}
 .icon{font-size: 16px !important;}
 .details{font-size: 14px !important;}
 .info{font-size: 13px !important;}
 .small{font-size: 11px !important;}
-
-/* Griding */
-.table{padding: 0 10px 0 10px;}
-.row{padding: 10px;}
-.col{display: inline-block;}
-.col-6{width: 49%;}
-.col-5{width: 41%;}
-.col-4{width: 32%;}
-.col-3{width: 25%;}
-.col-2{width: 16%;}
-.col-1{width: 8%;}
-.col-rem{width: auto;}
-/* complete */
-.content-right{text-align: right;}
-.content-center{text-align: center;}
-.pos{margin: auto;width: 70%;}
-.cross:after{content: ' \2716';}
-.flor-green{color: seagreen;}
-.btn{width: 90%;}
-button{
-    width: 100% !important;
-    background-color: rgba(0, 0, 0, 0.19) !important;
-    color: white !important;
-}
-button:hover{
-    background-color: seagreen !important;
-}
+.cross:after {content: ' \2716';font-size: 16px !important;color: rgba(0, 0, 0, 0.5) !important;}
+.flor-green {color: seagreen;}
 .policy>a{
     color: rgb(0, 197, 85);
     text-decoration: none;
 }
-.end{
-    margin-bottom: 10px;
+.main-button{
+    background-color: rgba(0, 0, 0, 0.19) !important;
+    color: white !important;
 }
-.policy{
-    width: 90%;
-    margin: auto;
-}
-
-.margin-null{
-    margin: 0 !important;
-}
-
-@media only screen and (min-width: 2560px){
-    .main{
-        width: 20%
-    }
-}
-
-@media only screen and (max-width: 1029px){
-    .main{
-        width: 40%;
-    }
-    
-}
-
-@media only screen and (max-width: 778px){
-    .main{
-        width: 60%;
-    }
-}
-
-@media only screen and (max-width: 520px){
-    .main{
-        width: 90%;
-    }
-}
-
-@media only screen and (max-width: 345px){
-    .main{
-        width: 98%;
-    }
+.main-button:hover{
+    background-color: seagreen !important;
 }
