@@ -86,20 +86,20 @@ button:hover{
     }
 }
 
-@media only screen and (max-width: 1025px){
+@media only screen and (max-width: 1029px){
     .main{
         width: 40%;
     }
     
 }
 
-@media only screen and (max-width: 770px){
+@media only screen and (max-width: 778px){
     .main{
         width: 60%;
     }
 }
 
-@media only screen and (max-width: 450px){
+@media only screen and (max-width: 520px){
     .main{
         width: 90%;
     }
