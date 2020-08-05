@@ -39,6 +39,6 @@ header{font-size: 20px;}
     background-color: rgba(0, 0, 0, 0.19) !important;
     color: white !important;
 }
-.main-button:hover{
-    background-color: seagreen !important;
-}
+.main-button:hover{background-color: seagreen !important;}
+
+.payment-container{padding: 0 25px 0 25px;}

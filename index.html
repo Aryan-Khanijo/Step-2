@@ -27,11 +27,11 @@
 			</div>
 			<md-divider></md-divider>
 			<div class="table" layout="row">
-				<div flex="40" flex-offset="5" layout="column">
+				<div flex="40" flex-offset="15" layout="column">
 					<div class="light small">Check-in : 2:00 p.m.</div>
 					<div class="info">23 Sept 2017,Wed</div>
 				</div>
-				<div flex="40" flex-offset="10" class="align-right" layout="column">
+				<div flex="40" flex-offset="10" layout="column">
 					<div class="light small">Check-out : 12:00 p.m.</div>
 					<div class="info">23 Sept 2017,Wed</div>
 				</div>
@@ -68,21 +68,23 @@
 				</div>
 			</div>
 			<md-divider></md-divider>
-			<div layout="row" class="table">
-				<div flex="50" layout="column">
-					<div>Total Payable</div>
-					<div class="flor-green info">View all details</div>
+			<div class="payment-container">
+				<div layout="row" class="table">
+					<div flex="50" layout="column">
+						<div>Total Payable</div>
+						<div class="flor-green info">View all details</div>
+					</div>
+					<div flex="50" layout="column" class="align-right">
+						INR 23,000
+					</div>
 				</div>
-				<div flex="50" layout="column" class="align-right">
-					INR 23,000
+				<div layout="row">
+					<md-button class="main-button" flex-offset="5" flex="90">Proceed to Payment</md-button>
 				</div>
-			</div>
-			<div layout="row">
-				<md-button class="main-button" flex-offset="5" flex="90">Proceed to Payment</md-button>
-			</div>
-			<div layout="row">
-				<div flex-offset="5" flex="90" class="small policy">
-					By proceeding you agree to the <a href="#">Hotel Booking Policy, Hotel Cancellation Policy and Terms & Conditions</a> of Ganga Kinare.
+				<div layout="row">
+					<div flex-offset="5" flex="90" class="small policy">
+						By proceeding you agree to the <a href="#">Hotel Booking Policy, Hotel Cancellation Policy and Terms & Conditions</a> of Ganga Kinare.
+					</div>
 				</div>
 			</div>
 		</div>
