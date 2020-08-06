@@ -24,12 +24,14 @@ header{font-size: 20px;}
 .table{padding: 15px;}
 .format-text{font-family: 'Oswald', sans-serif; font-weight: normal;}
 .light{color: rgba(0, 0, 0, 0.5) !important;}
-.align-center{text-align: center;}
+.align-center{text-align: center !important;}
 .align-right{text-align: right;}
 .icon{font-size: 16px !important;}
 .details{font-size: 14px !important;}
 .info{font-size: 13px !important;}
 .small{font-size: 11px !important;}
+.vsmall{font-size: 10px !important;}
+.room-row{padding-bottom: 15px;}
 .cross:after {content: ' \2716';font-size: 16px !important;color: rgba(0, 0, 0, 0.5) !important;}
 .flor-green {color: seagreen;}
 .policy>a{
@@ -39,7 +41,8 @@ header{font-size: 20px;}
 .main-button{
     background-color: rgba(0, 0, 0, 0.19) !important;
     color: white !important;
+    margin: 0 !important;
 }
 .main-button:hover{background-color: seagreen !important;}
 
-.payment-container{padding: 0 25px 0 25px;}
+.payment-container{padding: 15px 30px 15px 15px;}
