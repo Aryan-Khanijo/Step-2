@@ -40,7 +40,6 @@ header{font-size: 20px;}
 .main-button{
     background-color: rgba(0, 0, 0, 0.19) !important;
     color: white !important;
-    margin: 0 !important;
 }
 .main-button:hover{background-color: seagreen !important;}
 
