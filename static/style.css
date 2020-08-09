@@ -9,7 +9,10 @@ html, body{
     background-color: aquamarine;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
-    overflow: auto;
+}
+
+html::-webkit-scrollbar{
+    display: none;
 }
 
 .main{
