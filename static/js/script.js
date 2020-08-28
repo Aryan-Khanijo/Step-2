@@ -1,4 +1,4 @@
-var roomNameTitleList = ['AC Room Only','Non AC Room With Breakfast','Non AC Room Only With Breakfast and Dinner'];
+var roomNameTitleList = ['AC Room Only','Non AC Room With Breakfast','Non AC Room With Breakfast and Dinner'];
 var oldPriceList = ['14,000','15,000','17,000'];
 var revisedPriceList = ['10,500','11,250','12,750'];
 var detIndex = 0;
@@ -70,10 +70,14 @@ function createRoomDOM(detDataItem){
 
 
 function createPriceDOM(listItem){
+	var x = "";
+	if(listItem.title.length>13){
+		var x = "...";
+	}
 	var price = $(`<div class="layout-row" style="padding-bottom: 15px !important;">
 						<div class="layout-column flex-33">
 							<div class="format-text">${listItem.category}</div>
-							<div class="small light">${listItem.title}</div>
+							<div class="small light">${listItem.title.slice(0,13)}${x}</div>
 						</div>
 						<div class="align-center flex layout-column">
 							<div class="light info">
