@@ -28,34 +28,34 @@ $("document").ready(function (){
 	function createRoomDOM(detDataItem){
 		var divContent = $(`<div class="type"></div>`);
 		var divRoomName =$(`<div class="room-name-container">
-				<p class="room-name title">
-					${detDataItem.title}
-				</p>
-				<p class="details">
-					<a href="#" class="view-more details">view details</a>
-				</p>
-			</div>`);
+								<p class="room-name title">
+									${detDataItem.title}
+								</p>
+								<p class="details">
+									<a href="#" class="view-more details">view details</a>
+								</p>
+							</div>`);
 		var countContainer = $(`<div class="room-count-container">
-							<div class="group">
-								<button class="counter inc" id="${detDataItem.id}"><i class="fa fa-plus-circle" aria-hidden="true"></i></button>
-								<p class="room-count" id="acroomcount">${detDataItem.roomCount}</p>
-								<button class="counter dec" id="${detDataItem.id}"><i class="fa fa-minus-circle" aria-hidden="true"></i></button>
-							</div>
-							<p class="applied-offer">
-								*Applied <span class="offer-code">SUMMER25</span>
-							</p>    
-						</div>`);
+									<div class="group">
+										<button class="counter inc" id="${detDataItem.id}"><i class="fa fa-plus-circle" aria-hidden="true"></i></button>
+										<p class="room-count" id="acroomcount">${detDataItem.roomCount}</p>
+										<button class="counter dec" id="${detDataItem.id}"><i class="fa fa-minus-circle" aria-hidden="true"></i></button>
+									</div>
+									<p class="applied-offer">
+										*Applied <span class="offer-code">SUMMER25</span>
+									</p>    
+								</div>`);
 		var priceContainer = $(`<div class="price">
-							<p class="extra-info">
-								<strike>INR ${detDataItem.oldPrice}</strike> <i class="fa fa-info-circle" aria-hidden="true"></i>
-							</p>
-							<p class="new-price title">
-								<i class="fa fa-rupee"></i>${detDataItem.newPrice} <span class="per">/night</span>
-							</p>
-							<p class="extra-info">
-								Non-Refundable <i class="fa fa-info-circle" aria-hidden="true"></i>
-							</p>
-						</div>`);
+									<p class="extra-info">
+										<strike>INR ${detDataItem.oldPrice}</strike> <i class="fa fa-info-circle" aria-hidden="true"></i>
+									</p>
+									<p class="new-price title">
+										<i class="fa fa-rupee"></i>${detDataItem.newPrice} <span class="per">/night</span>
+									</p>
+									<p class="extra-info">
+										Non-Refundable <i class="fa fa-info-circle" aria-hidden="true"></i>
+									</p>
+								</div>`);
 		var hrTag = $(`<hr class="ruler">`);
 		divContent.append(divRoomName);
 		divContent.append(countContainer);
