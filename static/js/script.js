@@ -17,6 +17,8 @@ $("document").ready(function (){
 		this.roomCount = 0;
 		this.category = "Semi Deluxe";
 	}
+
+	
 	function findPosition(getid){
 		var item = 0;
 		for (item=0;item<roomData.length;item++){
@@ -25,6 +27,8 @@ $("document").ready(function (){
 			}
 		}
 	}
+
+
 	function createRoomDOM(detDataItem){
 		var divContent = $(`<div class="type"></div>`);
 		var divRoomName =$(`<div class="room-name-container">
@@ -66,6 +70,7 @@ $("document").ready(function (){
 	
 	}
 
+
 	function createPriceDOM(listItem){
 		var x = "";
 		if(listItem.title.length>16){
@@ -88,6 +93,7 @@ $("document").ready(function (){
 		return price;
 	}
 
+
 	function loadpricedata(){
 		var item;
 		var totalPrice = 0;
@@ -102,6 +108,7 @@ $("document").ready(function (){
 		totalAmt = totalPrice;
 		$("#price-cont").html(`INR ${formatter.format(totalAmt)}`);
 	}
+
 
 	function loadroomdata(){
 		var item;
@@ -149,6 +156,7 @@ $("document").ready(function (){
 			$("#price-table").addClass("price-table");
 		}
 	}
+
 
 	for(detIndex=0;detIndex<3;detIndex++){
 		var room = new roomType(roomNameTitleList[detIndex], 
