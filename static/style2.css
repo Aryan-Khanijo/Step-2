@@ -1,0 +1,231 @@
+.heart-icon
+{
+    display: inline-block;
+    margin: 0px;
+    color: red;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.like{ 
+    margin: 0;
+    display: inline-block;
+}
+
+.rooms-left{
+    float: right;
+    margin: 0;
+    margin-top: 10px;
+    margin-right: 3%;
+    width: max-content;
+    font-size: x-small;
+    background-color: white;
+    padding: 1%;
+    color: rgb(63, 60, 60);
+    border-radius: 25px;
+    opacity: 85%;
+}
+
+.open-link{
+    margin: 0;
+    margin-left: 80%;
+}
+
+.fa-external-link{
+    color: white !important;
+    opacity: 50%;
+}
+
+button:focus{
+    outline: 0;
+}
+
+.room-info
+{
+    margin-left: 15px;
+}
+
+.suite{
+    
+    color: rgb(41, 40, 40);
+}
+
+.suite-info{
+    
+    color: gray;
+    display: inline;
+}
+
+.view-more{
+    color: rgb(0, 202, 135);
+    size: small;
+    display: inline;
+    text-decoration: none;
+}
+
+
+.room-det
+{
+    
+    color: rgb(51, 51, 51);
+    font-size: medium;
+}
+
+.ico{
+    color: gray;
+}
+
+.offer{
+    
+    color: rgb(255, 103, 129);
+    font-size: small;
+    margin: 4% 0 0 0;
+}
+
+.discount{
+    font-size: xx-small;
+}
+
+.ruler
+{
+    height: 0.5px !important;
+    border-width:0;
+    margin: 0;
+    color:rgb(175, 175, 175);
+    background-color:rgb(175, 175, 175);
+}
+
+
+.type div{
+    display: inline-block;
+}
+
+.room-name-container{
+    width: 50%;
+    padding-left: 3%;
+}
+
+.room-name
+{
+    color: rgb(88, 88, 88);
+}
+
+.room-count-container
+{
+    margin-top: 1.5%;
+    width: 18%;
+}
+
+.room-count{
+    margin: 0;
+    display: inline;
+}
+
+.counter
+{
+    border: 0;
+    background-color: transparent;
+    font-size: large;
+}
+
+.applied-offer{
+    color: rgb(153, 153, 153);
+    font-size: x-small;
+}
+
+.offer-code
+{
+    color: rgb(255, 103, 129);
+}
+
+
+.price
+{
+    width: 25%;
+    text-align: right;
+}
+
+.new-price
+{
+    margin: 0;
+    font-size: large;
+}
+
+.extra-info
+{
+    color: rgb(153, 153, 153);
+    font-size: small;
+    margin: 0;
+}
+
+.view-all-container
+{
+    width: 100%;
+    background-color: rgb(207, 235, 235);
+}
+
+.view-all
+{
+    margin: 0;
+    text-align: center !important;
+    display: block !important;
+    font-size: medium;
+    padding: 1%;
+}
+
+@media only screen and (max-width: 770px){
+    body{
+        font-size: smaller;
+    }
+    .main-m{
+        width: 80%;
+    }
+    .room-pic{
+        width: 100%;
+    }
+    .room-info{
+        width: 100%;
+    }
+    .suite-info{
+        padding-left: 0%;
+        text-align: center;
+        display: block;
+    }
+    .view-more{
+        text-align: center;
+        display: block;
+    }
+    .room-name-container{
+        padding-left: 1%;
+        width: 40%;
+    }
+    .details{
+        text-align: left !important; 
+    }
+    .room-count-container{
+        width: 25%;
+    }
+    .group{
+        text-align: center;
+    }
+    .applied-offer{
+        text-align: center;
+    }
+    .price{
+        width: 30%;
+    }
+    .extra-info{
+        font-size: x-small;
+    }
+    .new-price{
+        font-size: small;
+    }
+    .per{
+        font-size: x-small;
+    }
+    .open-link{
+        float: right;
+        padding-right: 3%;
+    }
+}
+

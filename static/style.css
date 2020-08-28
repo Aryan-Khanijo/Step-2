@@ -11,6 +11,7 @@ html, body{
     scrollbar-width: none;  /* Firefox */
 }
 html::-webkit-scrollbar{display: none;}
+.main-all{margin: auto;}
 .main{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 10px;
@@ -21,6 +22,11 @@ html::-webkit-scrollbar{display: none;}
 
 header{font-size: 20px;}
 .table{padding: 15px;}
+.title
+{
+    font-family: 'Oswald', sans-serif;
+    font-weight: normal;
+}
 .format-text{font-family: 'Oswald', sans-serif; font-weight: normal;}
 .light{color: rgba(0, 0, 0, 0.5) !important;}
 .align-center{text-align: center !important;}
@@ -36,3 +42,21 @@ header{font-size: 20px;}
 .main-button{background-color: rgba(0, 0, 0, 0.19) !important;color: white !important;}
 .main-button:hover{background-color: seagreen !important;}
 .payment-container{padding: 15px 30px 15px 15px;}
+.per{font-size: small;}
+.main-m{
+    /* border-radius: 10px; */
+    background-color: white;
+    margin: auto;
+    margin-top: 10%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-weight: normal;
+}
+.room-pic{
+    margin: 0;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    display: inline-block;
+    background-image: url("./media/9c841444ec7a198e3fc2da32077ea95b.jpg");
+}

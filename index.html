@@ -6,89 +6,234 @@
 	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.12/angular-material.min.css">
 	<!-- Material Icon -->
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<!-- Your StyleSheet   -->
 	<link rel="stylesheet" href="./static/style.css">
+	<link rel="stylesheet" href="./static/style2.css">
 </head>
 <body ng-app="NewApp" ng-controller="AppCtrl">
-    <!-- Your HTML Content Here -->
-	<div flex="30" flex-md="40" flex-sm="60" flex-xs="90" flex-offset="35" flex-offset-md="30" flex-offset-sm="20"  flex-offset-xs="5" layout="column"> 
-		<div layout="column" class="main">
-			<div class="table" layout="column" layout-align=" center">
-				<header class="format-text">Tariff Details</header>
+	<!-- Your HTML Content Here -->
+	<div class="main-all" layout="row" flex="90">
+		<div class="main-m" flex="50" layout="column">
+			<div layout="row">
+				<div class="room-pic" flex="35">
+				<div class="heart-icon">
+					<i class="fa fa-heart"></i>
+				</div>
+				<div class="like">
+					Most Liked
+				</div>
+				<div class="rooms-left">
+					4 rooms left
+				</div>
+				<br><br><br><br><br><br>
+				<div class="open-link"><button style="background: transparent; border: 0px; font-size:24px"><i class="fa fa-external-link"></i></button></div>
+				</div>
+				<div class="room-info">
+					<p class="suite title">
+						Lotus Suite
+					</p>
+					<p class="suite-info">
+						TV | Air Conditioning | Wifi | Electronic Safe | Tea/Coffee Ma... 
+					</p>
+					<p class="view-more">
+						<a class="view-more" href="#view">view more</a>
+					</p>
+					<p class="room-det">
+						<i class="fa ico fa-users" aria-hidden="true"></i> 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<i class="fa ico fa-bed" aria-hidden="true"></i> King Size
+					</p>
+					<p class="offer">
+						<span class="discount fa-stack fa-lg">
+							<i class="fa fa-certificate fa-stack-2x"></i>
+							<i class="fa fa-percent fa-stack-1x fa-inverse"></i>
+						</span> SUMMER25, PROMO10
+					</p>        
+				</div>
 			</div>
-			<md-divider></md-divider>
-			<div class="table" layout="row details">
-				<div style="margin-right: 20px;">
-					Rooms &nbsp;&nbsp;<span class="light">2</span>
-				</div>
-				<div flex="33">
-					Adults &nbsp;&nbsp;<span class="light">4</span>
-				</div>
-			</div>
-			<md-divider></md-divider>
-			<div class="table" layout="row">
-				<div flex="50" layout="column">
-					<div class="light info">Check-in : 2:00 p.m.</div>
-					<div class="info">23 Sept 2017,Wed</div>
-				</div>
-				<div flex="50" layout-align="end end" layout="column">
-					<div class="light info">Check-out : 12:00 p.m.</div>
-					<div class="info">23 Sept 2017,Wed</div>
-				</div>
-			</div>
-			<md-divider></md-divider>
-			<div class="table">
-				<div layout="row" style="padding-bottom: 15px !important;">
-					<div layout="column" flex="33">
-						<div class="format-text">Semi Deluxe</div>
-						<div class="small light">AC Room Only</div>
+			
+			<hr class="ruler">
+			<div class="types-rooms">
+				<div class="type">
+					<div class="room-name-container">
+					<p class="room-name title">
+						AC Room Only
+					</p>
+					<p class="details">
+						<a href="#viewdet" class="view-more details">view details</a>
+					</p>
 					</div>
-					<div class="align-center" flex layout="column">
-						<div class="light info">
-							<i class="material-icons icon">create</i>x1
+					<div class="room-count-container">
+						<div class="group">
+							<button class="counter" onclick="inc('acroomcount')"><i class="fa fa-plus-circle" aria-hidden="true"></i></button>
+							<p class="room-count" id="acroomcount">0</p>
+							<button class="counter" onclick="dec('acroomcount')"><i class="fa fa-minus-circle" aria-hidden="true"></i></button>
 						</div>
+						<p class="applied-offer">
+							*Applied <span class="offer-code">SUMMER25</span>
+						</p>    
 					</div>
-					<div flex="33" layout="column">
-						<div class="cross align-right">INR 10,500</div>
+					<div class="price">
+						<p class="extra-info">
+							<strike>INR 14,000</strike> <i class="fa fa-info-circle" aria-hidden="true"></i>
+						</p>
+						<p class="new-price title">
+							<i class="fa fa-rupee"></i>10,500 <span class="per">/night</span>
+						</p>
+						<p class="extra-info">
+							Non-Refundable <i class="fa fa-info-circle" aria-hidden="true"></i>
+						</p>
 					</div>
 				</div>
-				<div layout="row">
-					<div layout="column" flex="33">
-						<div class="format-text">Semi Deluxe</div>
-						<div class="small light">AC Room with Br...</div>
+				<hr class="ruler">
+				<div class="type">
+					<div class="room-name-container">
+					<p class="room-name title">
+						Non AC Room Only With Breakfast
+					</p>
+					<p class="details">
+						<a href="#viewdet" class="view-more details">view details</a>
+					</p>
 					</div>
-					<div class="align-center" flex layout="column">
-						<div class="light info">
-							<i class="material-icons icon">create</i>x1
+					<div class="room-count-container">
+						<div class="group">
+							<button class="counter" onclick="inc('nonacroomcountwb')"><i class="fa fa-plus-circle" aria-hidden="true"></i></button>
+							<p class="room-count" id="nonacroomcountwb">0</p>
+							<button class="counter" onclick="dec('nonacroomcountwb')"><i class="fa fa-minus-circle" aria-hidden="true"></i></button>
 						</div>
+						<p class="applied-offer">
+							*Applied <span class="offer-code">SUMMER25</span>
+						</p>    
 					</div>
-					<div flex="33" layout="column">
-						<div class="cross align-right">INR 12,500</div>
+					<div class="price">
+						<p class="extra-info">
+							<strike>INR 15,000</strike> <i class="fa fa-info-circle" aria-hidden="true"></i>
+						</p>
+						<p class="new-price title">
+							<i class="fa fa-rupee"></i>11,250 <span class="per">/night</span>
+						</p>
+						<p class="extra-info">
+							Non-Refundable <i class="fa fa-info-circle" aria-hidden="true"></i>
+						</p>
+					</div>
+				</div>
+				<hr class="ruler">
+				<div class="type">
+					<div class="room-name-container">
+					<p class="room-name title">
+						AC Room Only With Breakfast and Dinner
+					</p>
+					<p class="details">
+						<a href="#viewdet" class="view-more details">view details</a>
+					</p>
+					</div>
+					<div class="room-count-container">
+						<div class="group">
+							<button class="counter" onclick="inc('acroomcountbd')"><i class="fa fa-plus-circle" aria-hidden="true"></i></button>
+							<p class="room-count" id="acroomcountbd">0</p>
+							<button class="counter" onclick="dec('acroomcountbd')"><i class="fa fa-minus-circle" aria-hidden="true"></i></button>
+						</div>
+						<p class="applied-offer">
+							*Applied <span class="offer-code">SUMMER25</span>
+						</p>    
+					</div>
+					<div class="price">
+						<p class="extra-info">
+							<strike>INR 17,000</strike> <i class="fa fa-info-circle" aria-hidden="true"></i>
+						</p>
+						<p class="new-price title">
+							<i class="fa fa-rupee"></i>12,750 <span class="per">/night</span>
+						</p>
+						<p class="extra-info">
+							Non-Refundable <i class="fa fa-info-circle" aria-hidden="true"></i>
+						</p>
 					</div>
 				</div>
 			</div>
-			<md-divider></md-divider>
-			<div class="payment-container">
-				<div layout="row">
+			<div class="view-all-container">
+				<p class="view-all view-more">View All</p>
+			</div>
+		</div>
+		<div flex="30" flex-md="40" flex-sm="60" flex-xs="90" flex-offset="5" layout="column"> 
+			<div layout="column" class="main">
+				<div class="table" layout="column" layout-align=" center">
+					<header class="format-text">Tariff Details</header>
+				</div>
+				<md-divider></md-divider>
+				<div class="table" layout="row details">
+					<div style="margin-right: 20px;">
+						Rooms &nbsp;&nbsp;<span class="light">2</span>
+					</div>
+					<div flex="33">
+						Adults &nbsp;&nbsp;<span class="light">4</span>
+					</div>
+				</div>
+				<md-divider></md-divider>
+				<div class="table" layout="row">
 					<div flex="50" layout="column">
-						<div>Total Payable</div>
-						<div style="margin-top: 5px;" class="flor-green info">View all details</div>
+						<div class="light info">Check-in : 2:00 p.m.</div>
+						<div class="info">23 Sept 2017,Wed</div>
 					</div>
-					<div flex="50" layout="column" class="align-right">
-						INR 23,000
+					<div flex="50" layout-align="end end" layout="column">
+						<div class="light info">Check-out : 12:00 p.m.</div>
+						<div class="info">23 Sept 2017,Wed</div>
 					</div>
 				</div>
-				<div layout="row">
-					<md-button class="main-button" style="margin: 10px 0 !important;" flex="100">Proceed to Payment</md-button>
+				<md-divider></md-divider>
+				<div class="table">
+					<div layout="row" style="padding-bottom: 15px !important;">
+						<div layout="column" flex="33">
+							<div class="format-text">Semi Deluxe</div>
+							<div class="small light">AC Room Only</div>
+						</div>
+						<div class="align-center" flex layout="column">
+							<div class="light info">
+								<i class="material-icons icon">create</i>x1
+							</div>
+						</div>
+						<div flex="33" layout="column">
+							<div class="cross align-right">INR 10,500</div>
+						</div>
+					</div>
+					<div layout="row">
+						<div layout="column" flex="33">
+							<div class="format-text">Semi Deluxe</div>
+							<div class="small light">AC Room with Br...</div>
+						</div>
+						<div class="align-center" flex layout="column">
+							<div class="light info">
+								<i class="material-icons icon">create</i>x1
+							</div>
+						</div>
+						<div flex="33" layout="column">
+							<div class="cross align-right">INR 12,500</div>
+						</div>
+					</div>
 				</div>
-				<div layout="row">
-					<div class="small policy">
-						By proceeding you agree to the <a href="#">Hotel Booking Policy, Hotel Cancellation Policy and Terms & Conditions</a> of Ganga Kinare.
+				<md-divider></md-divider>
+				<div class="payment-container">
+					<div layout="row">
+						<div flex="50" layout="column">
+							<div>Total Payable</div>
+							<div style="margin-top: 5px;" class="flor-green info">View all details</div>
+						</div>
+						<div flex="50" layout="column" class="align-right">
+							INR 23,000
+						</div>
+					</div>
+					<div layout="row">
+						<md-button class="main-button" style="margin: 10px 0 !important;" flex="100">Proceed to Payment</md-button>
+					</div>
+					<div layout="row">
+						<div class="small policy">
+							By proceeding you agree to the <a href="#">Hotel Booking Policy, Hotel Cancellation Policy and Terms & Conditions</a> of Ganga Kinare.
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+
     <!-- End Code -->
   	<!-- Angular Material requires Angular.js Libraries -->
   	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular.min.js"></script>
