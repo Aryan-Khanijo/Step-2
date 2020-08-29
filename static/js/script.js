@@ -1,6 +1,7 @@
 var roomNameTitleList = ['AC Room Only','AC Room With Breakfast','AC Room With Breakfast and Dinner'];
 var oldPriceList = ['14,000','15,000','17,000'];
 var revisedPriceList = ['10,500','11,250','12,750'];
+var categoryList = ['Semi Deluxe', 'Deluxe', 'Super Deluxe'];
 var detIndex = 0;
 var roomData = [];
 var roomId = 0;
@@ -9,13 +10,13 @@ var id = 0;
 formatter = new Intl.NumberFormat('en-US');
 
 $("document").ready(function (){
-	function roomType(title, oldPrice, newPrice){
+	function roomType(index){
 		this.id = ++id;
-		this.title = title;
-		this.oldPrice = oldPrice;
-		this.newPrice = newPrice;
+		this.title = roomNameTitleList[index];
+		this.oldPrice = oldPriceList[index];
+		this.newPrice = revisedPriceList[index];
 		this.roomCount = 0;
-		this.category = "Semi Deluxe";
+		this.category = categoryList[index];
 	}
 
 	
@@ -159,8 +160,7 @@ $("document").ready(function (){
 
 
 	for(detIndex=0;detIndex<3;detIndex++){
-		var room = new roomType(roomNameTitleList[detIndex], 
-			oldPriceList[detIndex], revisedPriceList[detIndex]);
+		var room = new roomType(detIndex);
 		roomData.push(room);
 	}
 	loadroomdata();
