@@ -17,6 +17,9 @@ $("document").ready(function (){
 		this.newPrice = revisedPriceList[index];
 		this.roomCount = 0;
 		this.category = categoryList[index];
+		this.totalAmt = function (){
+			return parseInt(this.newPrice.replace(',','')) * this.roomCount;
+		}
 	}
 
 	
@@ -102,7 +105,7 @@ $("document").ready(function (){
 		for(item=0;item<3;item++){
 			if(roomData[item]["roomCount"]!=0){
 				var price = createPriceDOM(roomData[item]);
-				totalPrice += parseInt(roomData[item]['newPrice'].replace(',','')) * parseInt(roomData[item]["roomCount"]); 
+				totalPrice += roomData[item].totalAmt(); 
 				$("#price-table").append(price);
 			}
 		}
