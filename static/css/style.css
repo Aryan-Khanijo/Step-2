@@ -37,7 +37,7 @@ header{font-size: 20px;}
 .info{font-size: 13px !important;}
 .small{font-size: 11px !important;}
 .vsmall{font-size: 10px !important;}
-.cross:after {content: ' \2716';font-size: 16px !important;color: rgba(0, 0, 0, 0.5) !important;}
+.cross:after {content: ' \2716';font-size: 16px !important;color: rgba(0, 0, 0, 0.5) !important;cursor: pointer;}
 .flor-green {color: seagreen;}
 .policy>a{color: rgb(0, 197, 85);text-decoration: none;}
 .main-button{background-color: rgba(0, 0, 0, 0.19) !important;color: white !important;}
