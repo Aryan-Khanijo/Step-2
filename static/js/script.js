@@ -2,7 +2,6 @@ var roomNameTitleList = ['AC Room Only','AC Room With Breakfast','AC Room With B
 var oldPriceList = ['14,000','15,000','17,000'];
 var revisedPriceList = ['10,500','11,250','12,750'];
 var categoryList = ['Semi Deluxe', 'Deluxe', 'Super Deluxe'];
-var detIndex = 0;
 var roomData = [];
 var roomId = 0;
 var totalAmt = 0;
@@ -161,10 +160,15 @@ $("document").ready(function (){
 		}
 	}
 
-
-	for(detIndex=0;detIndex<3;detIndex++){
-		var room = new roomType(detIndex);
-		roomData.push(room);
+	
+	function init(){
+		var detIndex = 0;
+		for(detIndex=0;detIndex<3;detIndex++){
+			var room = new roomType(detIndex);
+			roomData.push(room);
+		}
+		loadroomdata();
 	}
-	loadroomdata();
+
+	init();
 })
