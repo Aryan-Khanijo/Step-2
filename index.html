@@ -11,9 +11,9 @@
 	<!-- Your StyleSheet   -->
 	<link rel="stylesheet" href="./static/css/style.css">
 	<link rel="stylesheet" href="./static/css/style2.css">
-	<script src="./static/js/script.js"></script>
+	<!-- <script src="./static/js/script.js"></script> -->
 </head>
-<body ng-app="NewApp" ng-controller="AppCtrl">
+<body ng-app="NewApp" ng-controller="AppCtrl" ng-cloak>
 	<!-- Your HTML Content Here -->
 	<div class="main-all" layout="row" flex="90"> <!-- Main Div -->
 		<div class="main-m" flex="50" layout="column"> <!-- Step 1 Div -->
@@ -55,7 +55,36 @@
 			</div>
 			<hr class="ruler">
 			<div id="room-type" class="types-rooms">
-				
+				<div ng-repeat="room in roomData" class="type">
+					<div class="room-name-container">
+						<p class="room-name title" ng-bind="room.title"></p>
+						<p class="details">
+							<a href="#" class="view-more details">view details</a>
+						</p>
+					</div>
+					<div class="room-count-container">
+						<div class="group">
+							<button ng-click="room.inc()" class="counter inc" id="1"><i class="fa fa-plus-circle" aria-hidden="true"></i></button>
+							<p class="room-count" id="acroomcount" ng-bind="room.roomCount"></p>
+							<button ng-click="room.dec()" class="counter dec" id="1"><i class="fa fa-minus-circle" aria-hidden="true"></i></button>
+						</div>
+						<p class="applied-offer">
+							*Applied <span class="offer-code">SUMMER25</span>
+						</p>    
+					</div>
+					<div class="price">
+						<p class="extra-info">
+							<strike>INR <span ng-bind="room.oldPrice"></span></strike> <i class="fa fa-info-circle" aria-hidden="true"></i>
+						</p>
+						<p class="new-price title">
+							<i class="fa fa-rupee"></i><span ng-bind="room.newPrice"></span> <span class="per">/night</span>
+						</p>
+						<p class="extra-info">
+							Non-Refundable <i class="fa fa-info-circle" aria-hidden="true"></i>
+						</p>
+					</div>
+					<hr class="ruler">
+				</div>
 			</div>
 			<div class="view-all-container">
 				<p class="view-all view-more">View All</p>
@@ -87,8 +116,22 @@
 					</div>
 				</div>
 				<md-divider></md-divider>
-				<div id="price-table" class="table">
-					
+				<div id="price-table" class="table price-table">
+					<div ng-if="msg" style="padding-bottom: 15px !important;" ng-bind="msg" class="light"></div>
+					<div ng-repeat="room in roomData" ng-if="room.roomCount>0" layout="row" style="padding-bottom: 15px !important;">
+						<div layout="column" flex="33">
+							<div class="format-text" ng-bind="room.category"></div>
+							<div class="small light" ng-bind="room.stripTitle()"></div>
+						</div>
+						<div class="align-center" flex layout="column">
+							<div class="light info">
+								x<span ng-bind="room.roomCount"></span>
+							</div>
+						</div>
+						<div layout="column" flex="33">
+							<div id="room.id" class="align-right">INR <span ng-bind="room.newPrice"></span> <span flex class="cross" ng-click="room.cross()"></span></div>
+						</div>
+					</div>
 				</div>
 				<md-divider></md-divider>
 				<div class="payment-container">
@@ -97,9 +140,7 @@
 							<div>Total Payable</div>
 							<div style="margin-top: 5px;" class="flor-green info">View all details</div>
 						</div>
-						<div id="price-cont" flex="50" layout="column" class="align-right">
-							
-						</div>
+						<div id="price-cont" flex="50" layout="column" class="align-right" ng-bind="displayAmt()"></div>
 					</div>
 					<div layout="row">
 						<md-button class="main-button" style="margin: 10px 0 !important;" flex="100">Proceed to Payment</md-button>
@@ -119,13 +160,10 @@
   	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular.min.js"></script>
   	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-animate.min.js"></script>
   	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-aria.min.js"></script>
-  	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-messages.min.js"></script>
   	<!-- Angular Material Library -->
   	<script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.12/angular-material.min.js"></script>
-	<script>
-		angular.module('NewApp', ['ngMaterial','ngMessages'])
-		.controller('AppCtrl', function($scope) {});
-	</script>
+	<script src="./static/js/app.js"></script>
+	<script src="./static/js/model.js"></script>
   	<!-- Your application bootstrap  -->
 </body>
 </html>
