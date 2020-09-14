@@ -119,7 +119,7 @@
 				<div id="price-table" class="table price-table">
 					<div ng-if="msg" style="padding-bottom: 15px !important;" ng-bind="msg" class="light"></div>
 					<div ng-repeat="room in roomData" ng-if="room.roomCount>0" layout="row" style="padding-bottom: 15px !important;">
-						<div layout="column" flex="33">
+						<div layout="column" flex="30">
 							<div class="format-text" ng-bind="room.category"></div>
 							<div class="small light" ng-bind="room.stripTitle()"></div>
 						</div>
@@ -128,7 +128,7 @@
 								x<span ng-bind="room.roomCount"></span>
 							</div>
 						</div>
-						<div layout="column" flex="33">
+						<div layout="column" flex="30">
 							<div id="room.id" class="align-right">INR <span ng-bind="room.newPrice"></span> <span flex class="cross" ng-click="room.cross()"></span></div>
 						</div>
 					</div>
