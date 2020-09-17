@@ -1,5 +1,3 @@
-var BE = angular.module('NewApp', ['ngMaterial']);
-
 BE.controller('AppCtrl', [
 	"$scope",
 	"prepareRoomObject",

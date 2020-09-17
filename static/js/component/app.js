@@ -1,0 +1,1 @@
+var BE = angular.module('NewApp', ['ngMaterial']);
